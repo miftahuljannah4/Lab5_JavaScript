@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Form Validasi JavaScript</title>
+        <link rel="stylesheet" href="Style_Validasi.css">
+		
+        <script type="text/javascript">
+            function validasi() {
+                var nama = document.getElementById("nama").value;
+                var email = document.getElementById("email").value;
+                var jurusan = document.getElementById("jurusan").value;
+                var alamat = document.getElementById("alamat").value;
+                if (nama != "" && email!="" && alamat !="") {
+                    return true;
+                }else{
+                    alert('Isi form pendaftaran dengan lengkap!');
+                }
+            }
+        </script>
+	</head>
+	<body>          
+			<form action="#" method="POST" onSubmit="validasi()">
+                <h1>Form Pendaftaran</h1>
+				<div class="txtb">
+					<label>Nama Lengkap:</label>
+					<input type="text" name="nama" id="nama" placeholder="wajib diisi" />
+				</div><br>
+				<div class="txtb">
+					<label>Email:       </label>
+					<input type="email" name="email" id="email" placeholder="wajib diisi" />
+				</div><br>
+				<div class="txtb">
+					<label>Jurusan:     </label>
+					<input type="jurusan" name="jurusan" id="jurusan" placeholder="wajib diisi" />
+				</div><br>
+				<div class="txtb">
+					<label>Alamat:</label><br>
+					<textarea cols="40" rows="5" name="alamat" id="alamat" placeholder="wajib diisi"></textarea>
+				</div><br>
+				<div class="btn">
+					<input type="submit" value="Daftar" class="tombol">
+				</div>
+			</form>
+	</body>
+</html>
